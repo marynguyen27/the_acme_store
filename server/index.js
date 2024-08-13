@@ -49,6 +49,14 @@ const init = async () => {
     await createTables();
     console.log('Tables created successfully');
 
+    await createUser('Abigail Adams', 'password1');
+    await createUser('Benjamin Button', 'password2');
+    await createUser('Chatty Cathy', 'password3');
+
+    await createProduct('Apple');
+    await createProduct('Banana');
+    await createProduct('Chicken');
+
     app.listen(3000, () => {
       console.log('Server is listening on port 3000');
     });
